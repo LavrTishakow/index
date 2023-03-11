@@ -1,25 +1,37 @@
+
 /* Сброс отступов и границ для всех элементов */
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	box-sizing: border-box;
  }
  
  /* Сброс стандартного шрифта */
+ html,
  body {
 	font-family: montserrat;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1;
  }
  
  /* Сброс стандартного цвета текста и фона */
+ html,
  body {
+	height: 100%;
 	color: #000;
 	background-color: #fff;
  }
+
+ .wrapper {
+	min-height: 100%;
+	overflow: hidden;
+ }
  
  /* Сброс стилей для списков */
- ul, ol {
+ ul, ol, li {
 	list-style: none;
  }
  
@@ -54,7 +66,34 @@
 	padding: 0;
 	margin: 0;
  }
- ._container {
+._container {
 	max-width: 1046px;
 	margin: 0px auto;
  }
+ /*header css*/
+	.header {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top:0;
+		z-index: 50;
+	}
+	.header__container {
+		display: flex;
+		min-height: 104px;
+		align-items: center;
+	}
+	._container {
+	}
+	.header__logo {
+	}
+	.header__menu {
+	}
+	.menu {
+	}
+	.menu__list {
+	}
+	.menu__item {
+	}
+	.menu__link {
+	}
