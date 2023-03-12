@@ -8,26 +8,23 @@
 	border: 0;
 	box-sizing: border-box;
  }
- 
- /* Сброс стандартного шрифта */
+
  html,
  body {
-	font-family: montserrat;
-	font-size: 1rem;
+	font-size: 14px;
 	line-height: 1;
- }
- 
- /* Сброс стандартного цвета текста и фона */
- html,
- body {
 	height: 100%;
-	color: #000;
+	color: #252B42;
 	background-color: #fff;
+	font-weight: 500;
+	font-family: montserrat;
  }
 
  .wrapper {
 	min-height: 100%;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
  }
  
  /* Сброс стилей для списков */
@@ -68,7 +65,9 @@
  }
 ._container {
 	max-width: 1046px;
+	padding: 0px 15px;
 	margin: 0px auto;
+	box-sizing: content-box;
  }
  /*header css*/
 	.header {
@@ -83,17 +82,68 @@
 		min-height: 104px;
 		align-items: center;
 	}
+
+@media (max-width: 479px) {
+	.header__container {min-height: 70px;}
+}
+
 	._container {
 	}
 	.header__logo {
+		font-size: 24px;
+		font-weight: 700;
+		color: inherit;
 	}
 	.header__menu {
+		margin: 0px 0px 0px 133px;
 	}
+
+	@media (max-width: 992px){
+		.header__menu {
+			margin: 0px 0px 0px 80px;
+		}
+	}
+
+	@media (max-width: 767px){
+		.header__menu {
+			margin: 0px 0px 0px 40px;
+		}
+	}
+
+	@media (max-width: 479px){
+		.header__menu {
+			margin: 0px 0px 0px 20px;
+		}
+	}
+
+
 	.menu {
+		padding: 5px 0;
 	}
 	.menu__list {
+		flex-wrap: wrap;
+		display: flex;
 	}
 	.menu__item {
 	}
-	.menu__link {
+	.menu__item:not(:last-child){
+		margin: 0px 21px 0px 0px;
 	}
+	.menu__link {
+		color: #737373;
+		font-weight: 600;
+		line-height: 171%;
+	}
+
+	@media (max-width: 479px){
+		.menu__link {
+			font-size: 18px;
+		}
+	}
+
+/*========================MAIN================================*/
+.main {
+	flex: 1 1 auto;
+}
+/*========================FOOTER================================*/
+.footer{}
