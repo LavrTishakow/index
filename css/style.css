@@ -175,6 +175,7 @@
 	padding: 184px 0px 191px 0px;
 	position: relative;
 	z-index: 2;
+	max-width: 509px;
 }
 .main-block__title {
 	font-size: 58px;
@@ -182,6 +183,9 @@
 	font-weight: 800;
 }
 .main-block__text {
+	color: #737373;
+	font-size: 20px;
+	line-height: 150%;
 }
 .main-block__buttons {
 }
